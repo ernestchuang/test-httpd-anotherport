@@ -34,8 +34,8 @@
         "ports": [
           {
             "name": "web",
-            "port": 8080,
-            "targetPort": 8080
+            "port": 32010,
+            "targetPort": 32010
           }
         ],
         "selector": {
@@ -174,7 +174,7 @@
                 "image": " ",
                 "ports": [
                   {
-                    "containerPort": 8080
+                    "containerPort": 32010
                   }
                 ],
                 "readinessProbe": {
@@ -182,7 +182,7 @@
                   "initialDelaySeconds": 3,
                   "httpGet": {
                     "path": "/",
-                    "port": 8080
+                    "port": 32010
                   }
                 },
                 "livenessProbe": {
@@ -190,7 +190,7 @@
                     "initialDelaySeconds": 30,
                     "httpGet": {
                         "path": "/",
-                        "port": 8080
+                        "port": 32010
                     }
                 },
                 "resources": {
